@@ -1,0 +1,18 @@
+version: '3'
+services:
+  flask-sample:
+    build: .
+    depends_on:
+      - db
+    ports:
+     - "5000:5000"
+    environment:
+     - DBUSER=postgres
+     - DBPASS=changeme
+     - DBHOST=db
+     - DBNAME=postgres
+  db:
+    image: postgres:10
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: changeme

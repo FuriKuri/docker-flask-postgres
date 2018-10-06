@@ -14,6 +14,15 @@ docker run -it --env DBPASS="<PASSWORD>" --env DBHOST="<SERVER_HOST_NAME>" --env
 ```
 The app can be reached in your browser at `http://127.0.0.1:5000`.
 
+## Docker compose with PostgreSQL
+
+You also can use the docker compose file to spin up the Python Flask application and a PostgreSQL docker container. The database connection information will be passed automatically within the docker compose file.
+
+```
+docker-compose build
+docker-compose up
+```
+
 # Contributing
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
